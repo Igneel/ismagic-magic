@@ -53,6 +53,7 @@
   8. Client Side vs Server Side
   9. Attacking Session Management
   10. Attacking Application logic
+  11. Race condition
   11. Инструментарий
 * Экспертиза носителей компьютерной информации (72)
 * Методы и инструментальные средства проведения расследования компьютерных инцидентов (108)
