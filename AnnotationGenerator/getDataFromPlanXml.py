@@ -46,12 +46,14 @@ for child in subjects:
                 child.find('Сем').get('СРС'), # 8
                 child.find('Сем').get('ЧасЭкз'), #9
                 child.find('Сем').get('Экз'), # 10
-                child.get('Компетенции')]) # 11
+                child.get('Компетенции'), # 11
+                child.get('СемЭкз') # 12
+                ]) 
 
 for s in range(0,len(subj)):
     
-    if(subj[s][9]!=None):
-        subj[s][9]=subj[s][9].split(', ')
+    if(subj[s][11]!=None):
+        subj[s][11]=subj[s][11].split(', ')
 
         
     #print(child.get('Дис')) # Имя дисциплины
@@ -125,6 +127,8 @@ for s in subj:
     row.cells[4].text = 'Вариативная часть ' + s[1]
     if s[2]!=None:
         row.cells[5].text = str(int(s[2]) / 2)
+    else if s[12]!=None:
+        row.cells[5].text = str(int(s[12]) / 2)
     else:
         row.cells[5].text = 'Поле не заполнено!!! ' #str(int(s[2]) / 2)
 
@@ -167,8 +171,9 @@ for s in subj:
     okadded=False
     opkadded=False
     pkadded=False
-    if s[9]!=None:
-        for c in s[9]:
+    if s[11]!=None:
+        print(s[11])
+        for c in s[11]:
             print(c)
             if c[0]=='О' and c[1]!='П' and not okadded:
                 paragraph = document.add_paragraph('общекультурные компетенции:')
