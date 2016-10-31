@@ -1,0 +1,7 @@
+Введение
+Active Directory
+OpenLDAP
+Open Trusted Network Architecture
+Корпоративные стандарты управления информационной безопасностью.
+PCI DSS
+Стандарт Банка России СТО БР ИББС-1.0-2014

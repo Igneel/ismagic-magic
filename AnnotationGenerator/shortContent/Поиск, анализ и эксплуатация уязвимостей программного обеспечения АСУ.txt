@@ -1,0 +1,8 @@
+OWASP Core review Guide
+OWASP Testing Guide
+Fuzzing
+Анализ бизнес-логики
+Authentication Testing
+Authorization Testing
+Session Management Testing
+Input Validation Testing

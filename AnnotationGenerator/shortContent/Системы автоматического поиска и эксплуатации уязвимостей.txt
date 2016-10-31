@@ -1,0 +1,13 @@
+Сканеры уязвимостей
+Metasploit/Armitage
+Написание собственных модулей для Metasploit
+ZAProxy
+Nessus
+sqlmap
+BBQSQL
+WAPT
+Nikto
+Burp Suite
+Protector Plus
+MaxPatrol
+XSpider 7

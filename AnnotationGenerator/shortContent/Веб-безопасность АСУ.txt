@@ -1,0 +1,12 @@
+Введение
+Методология поиска уязвимостей. OWASP Top 10.
+Уязвимости HTML 5
+Code injection
+XSS, XXE
+CSRF
+Attacking HTTPS SSL
+Attacking SSH Telnet
+Client Side и Server Side
+Attacking Session Management
+Attacking Application logic
+Race condition

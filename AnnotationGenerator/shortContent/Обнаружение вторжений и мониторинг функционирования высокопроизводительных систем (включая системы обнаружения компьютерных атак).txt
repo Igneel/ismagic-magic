@@ -1,0 +1,7 @@
+Системы мониторинга Zabbix, Nagios
+Системы обнаружения вторжений (IDS)
+Nsauditor Network Security Auditor
+KFSensor
+Core Impact
+Snort
+Linux Intrusion Detection System

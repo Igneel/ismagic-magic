@@ -1,0 +1,7 @@
+Цель и основные задачи проведения тестирования на проникновение
+Advanced Reconnaissance Techniques
+DNS recon
+Enumeration
+Remote Exploitation
+Post-Exploitation
+Bypassing Firewalls and Avoiding Detection 
