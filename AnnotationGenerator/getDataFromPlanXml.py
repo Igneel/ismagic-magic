@@ -22,7 +22,7 @@ theDirection='Оптотехника'
 theCodeOfDirection='12.04.02'
 who='магистр'
 whom='магистров'
-author='Костюченко Владимир Яковлевич, д-р физ.-мат. наук доцент, профессор каф. Физики'
+author='Звягинцева Полина Александровна, д-р физ.-мат. наук доцент, профессор каф. Физики'
 authorComments='Ф.И.О., степень, звание'
 theDate='28.11.2014 г.'
 
@@ -127,9 +127,10 @@ for s in subj:
     row.cells[4].text = 'Вариативная часть ' + s[1]
     if s[2]!=None:
         row.cells[5].text = str(int(s[2]) / 2)
-    else if s[12]!=None:
+    else: 
+     if s[12]!=None:
         row.cells[5].text = str(int(s[12]) / 2)
-    else:
+     else:
         row.cells[5].text = 'Поле не заполнено!!! ' #str(int(s[2]) / 2)
 
     row.cells[6].text = s[3]
@@ -203,6 +204,6 @@ for s in subj:
     # docx.section.Sections тут надо размер страницы нормальный сделать, A4
     # и поля.
 
-    document.save(s[0]+'.docx')
-
-    # os.system('touch \"//root//AnnotationGenerator//shortContent//'+s[0]+'.txt\"')
+    document.save('generated/' + s[0]+'.docx')
+    #os.system('touch \"goals/'+s[0]+'.txt\"')
+    #os.system('touch \"shortContent/'+s[0]+'.txt\"')
