@@ -26,6 +26,13 @@ author='Трифанов Александр Владимирович, аспир
 authorComments='Ф.И.О., степень, звание'
 theDate='28.11.2014 г.' # дата разработки стандарта
 
+def load_shortContent(name):
+	f= open (name+'.txt','r')
+	cont = f.read()
+	f.close()
+	return cont
+
+
 
 def getCContent(competences,c):
     for x in competences:
@@ -165,7 +172,7 @@ for s in subj:
 
     paragraph = document.add_paragraph('1.	Целями освоения дисциплины ' +
     	s[0]+'являются формирование у студентов общекультурных, общепрофессиональных и профессиональных компетенций, определяющих их готовность и способность, как будущих специалистов по направлению подготовки «'+
-    	theDirection+'», к эффективному применению усвоенных знаний для'+
+    	theDirection+'», к эффективному применению усвоенных знаний для '+
     	'РЕДАКТИРУЙ ЗДЕСЬ!')
     paragraph = document.add_paragraph('2.	Компетенции обучающегося, формируемые в результате освоения дисциплины:')
 
@@ -194,7 +201,9 @@ for s in subj:
     else:
         paragraph = document.add_paragraph('Компетенции не заполнены!!!!')
     paragraph = document.add_paragraph('3.	Краткое содержание дисциплины ')
-    paragraph = document.add_paragraph('Раздел I. Введение.')
+
+    paragraph = document.add_paragraph(load_shortContent(s[0]))
+    # paragraph = document.add_paragraph('Раздел I. Введение.')
 
 
     paragraph = document.add_paragraph('Аннотация разработана на основании ФГОС ВО по направлению подготовки '
