@@ -1,13 +1,12 @@
-Сканеры уязвимостей
-Metasploit/Armitage
-Написание собственных модулей для Metasploit
-ZAProxy
-Nessus
-sqlmap
-BBQSQL
-WAPT
-Nikto
-Burp Suite
-Protector Plus
-MaxPatrol
-XSpider 7
+Раздел I. Сканеры уязвимостей
+Раздел II. Инструмент для развётки эксплойтов Metasploit/Armitage
+Раздел III. Написание собственных модулей для Metasploit
+Раздел IV. Сканер Web уязвимостей ZAProxy
+Раздел V. Nessus
+Раздел VI. Использование sqlmap при поиске и эксплуатации SQL-инъекций
+Раздел VII. BBQSQL
+Раздел VIII. WAPT
+Раздел IX. Nikto
+Раздел X. Burp Suite
+Раздел XI. Protector Plus
+Раздел XII. MaxPatrol и XSpider 7

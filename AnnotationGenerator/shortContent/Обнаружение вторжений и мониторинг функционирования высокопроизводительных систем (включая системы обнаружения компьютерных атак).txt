@@ -1,7 +1,7 @@
-Системы мониторинга Zabbix, Nagios
-Системы обнаружения вторжений (IDS)
-Nsauditor Network Security Auditor
-KFSensor
-Core Impact
-Snort
-Linux Intrusion Detection System
+Раздел I. Системы мониторинга Zabbix и Nagios
+Раздел II. Системы обнаружения вторжений (IDS)
+Раздел III. Аудит сетей с использованием Nsauditor Network Security Auditor
+Раздел IV. Использование KFSensor, для обнаружения вторжений
+Раздел V. Тестирование несанкционированных проникновений в систему с помощью программы Core Impact
+Раздел VI. Использование Snort для обнаружения и предотвращения вторжений
+Раздел VII. Изучение возможностей Linux Intrusion Detection System

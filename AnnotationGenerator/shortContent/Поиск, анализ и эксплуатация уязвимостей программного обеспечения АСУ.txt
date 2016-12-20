@@ -1,8 +1,8 @@
-OWASP Core review Guide
-OWASP Testing Guide
-Fuzzing
-Анализ бизнес-логики
-Authentication Testing
-Authorization Testing
-Session Management Testing
-Input Validation Testing
+Раздел I. Руководство проверки кода OWASP Core review Guide
+Раздел II. Руководство тестирования OWASP Testing Guide
+Раздел III. Использование фаззинга для поиска уязвимостей
+Раздел IV. Анализ бизнес-логики приложений
+Раздел V. Тестирование механизма аутентификации
+Раздел VI. Тестирование механизма авторизации
+Раздел VII. Тестирование механизма управления сессиями
+Раздел VIII. Тестирование проверки пользовательского ввода
