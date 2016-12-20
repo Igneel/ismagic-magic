@@ -1,11 +1,13 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3.5
 # -*- coding: utf-8 -*-
 
 import xml.etree.ElementTree as ET
 import os
+import math
 from docx import Document
 from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.style import WD_STYLE_TYPE
 
 tree = ET.parse('12.04.02-01-00-ИБ-ver7.plm.xml')
 root = tree.getroot()
@@ -27,10 +29,17 @@ authorComments='Ф.И.О., степень, звание'
 theDate='28.11.2014 г.' # дата разработки стандарта
 
 def load_shortContent(name):
-	f= open (name+'.txt','r')
+	f= open ('shortContent/'+name+'.txt','r')
 	cont = f.read()
 	f.close()
 	return cont
+
+
+def load_goals(name):
+    f= open ('goals/'+name+'.txt','r')
+    cont = f.read()
+    f.close()
+    return cont
 
 
 
@@ -87,6 +96,9 @@ for s in subj:
     font = style.font
     font.name = 'Times New Roman'
     font.size = Pt(14)
+
+
+
     
     paragraph = document.add_paragraph('АННОТАЦИЯ',style='Normal')
 
@@ -105,9 +117,16 @@ for s in subj:
     paragraph = document.add_paragraph('«'+author +'»')
     paragraph_format = paragraph.paragraph_format
     paragraph_format.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    paragraph = document.add_paragraph('«'+authorComments +'»')
+    
+    style2 = document.styles.add_style('littleNote', WD_STYLE_TYPE.PARAGRAPH)
+    style2.font.name = 'Times New Roman'
+    style2.font.size=Pt(10)
+
+    paragraph = document.add_paragraph('«'+authorComments +'»',style='littleNote')
+
     paragraph_format = paragraph.paragraph_format
     paragraph_format.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+
 
     table = document.add_table(rows=14, cols=2)
     row = table.columns[0]
@@ -133,10 +152,10 @@ for s in subj:
     row.cells[3].text = 'очная'
     row.cells[4].text = 'Вариативная часть ' + s[1]
     if s[2]!=None:
-        row.cells[5].text = str(int(s[2]) / 2)
+        row.cells[5].text = str(math.ceil(int(s[2]) / 2))
     else: 
      if s[12]!=None:
-        row.cells[5].text = str(int(s[12]) / 2)
+        row.cells[5].text = str(math.ceil(int(s[12]) / 2))
      else:
         row.cells[5].text = 'Поле не заполнено!!! ' #str(int(s[2]) / 2)
 
@@ -173,7 +192,10 @@ for s in subj:
     paragraph = document.add_paragraph('1.	Целями освоения дисциплины ' +
     	s[0]+'являются формирование у студентов общекультурных, общепрофессиональных и профессиональных компетенций, определяющих их готовность и способность, как будущих специалистов по направлению подготовки «'+
     	theDirection+'», к эффективному применению усвоенных знаний для '+
-    	'РЕДАКТИРУЙ ЗДЕСЬ!')
+        load_goals(s[0]))
+    paragraph_format = paragraph.paragraph_format
+    paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
     paragraph = document.add_paragraph('2.	Компетенции обучающегося, формируемые в результате освоения дисциплины:')
 
     okadded=False
